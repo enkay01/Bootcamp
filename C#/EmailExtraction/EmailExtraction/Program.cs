@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Linq;
 
 namespace EmailExtraction
 {
@@ -15,7 +16,7 @@ namespace EmailExtraction
                 Dictionary<string, int> emails = new();
 
 
-                Regex emailRegex = new(@"([\w\.\-])+(\@)+[A-z]+(\.)+(\w){2,3}\.*(\w)*");
+                Regex emailRegex = new(@"([\w+&.-])+(\@)+[A-z]+(\.)+(\w)+\.*(\w)*");
                 MatchCollection matches = emailRegex.Matches(text);
                 Console.WriteLine("{0} emails found", matches.Count);
 
@@ -29,10 +30,8 @@ namespace EmailExtraction
                     {
                         emails[domain]++;
                     }
-
                 }
                 Console.WriteLine("{0} softwire emails found", emails["@softwire.com"]);
-
             }
             catch (Exception e)
             {

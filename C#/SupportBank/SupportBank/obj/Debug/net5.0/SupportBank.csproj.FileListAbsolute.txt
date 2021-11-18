@@ -1,0 +1,16 @@
+C:\Users\Ian.Nkwocha\OneDrive\Documents\Development\Training\Bootcamp\C#\SupportBank\SupportBank\bin\Debug\net5.0\SupportBank.exe
+C:\Users\Ian.Nkwocha\OneDrive\Documents\Development\Training\Bootcamp\C#\SupportBank\SupportBank\bin\Debug\net5.0\SupportBank.deps.json
+C:\Users\Ian.Nkwocha\OneDrive\Documents\Development\Training\Bootcamp\C#\SupportBank\SupportBank\bin\Debug\net5.0\SupportBank.runtimeconfig.json
+C:\Users\Ian.Nkwocha\OneDrive\Documents\Development\Training\Bootcamp\C#\SupportBank\SupportBank\bin\Debug\net5.0\SupportBank.runtimeconfig.dev.json
+C:\Users\Ian.Nkwocha\OneDrive\Documents\Development\Training\Bootcamp\C#\SupportBank\SupportBank\bin\Debug\net5.0\SupportBank.dll
+C:\Users\Ian.Nkwocha\OneDrive\Documents\Development\Training\Bootcamp\C#\SupportBank\SupportBank\bin\Debug\net5.0\ref\SupportBank.dll
+C:\Users\Ian.Nkwocha\OneDrive\Documents\Development\Training\Bootcamp\C#\SupportBank\SupportBank\bin\Debug\net5.0\SupportBank.pdb
+C:\Users\Ian.Nkwocha\OneDrive\Documents\Development\Training\Bootcamp\C#\SupportBank\SupportBank\obj\Debug\net5.0\SupportBank.csproj.AssemblyReference.cache
+C:\Users\Ian.Nkwocha\OneDrive\Documents\Development\Training\Bootcamp\C#\SupportBank\SupportBank\obj\Debug\net5.0\SupportBank.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ian.Nkwocha\OneDrive\Documents\Development\Training\Bootcamp\C#\SupportBank\SupportBank\obj\Debug\net5.0\SupportBank.AssemblyInfoInputs.cache
+C:\Users\Ian.Nkwocha\OneDrive\Documents\Development\Training\Bootcamp\C#\SupportBank\SupportBank\obj\Debug\net5.0\SupportBank.AssemblyInfo.cs
+C:\Users\Ian.Nkwocha\OneDrive\Documents\Development\Training\Bootcamp\C#\SupportBank\SupportBank\obj\Debug\net5.0\SupportBank.csproj.CoreCompileInputs.cache
+C:\Users\Ian.Nkwocha\OneDrive\Documents\Development\Training\Bootcamp\C#\SupportBank\SupportBank\obj\Debug\net5.0\SupportBank.dll
+C:\Users\Ian.Nkwocha\OneDrive\Documents\Development\Training\Bootcamp\C#\SupportBank\SupportBank\obj\Debug\net5.0\ref\SupportBank.dll
+C:\Users\Ian.Nkwocha\OneDrive\Documents\Development\Training\Bootcamp\C#\SupportBank\SupportBank\obj\Debug\net5.0\SupportBank.pdb
+C:\Users\Ian.Nkwocha\OneDrive\Documents\Development\Training\Bootcamp\C#\SupportBank\SupportBank\obj\Debug\net5.0\SupportBank.genruntimeconfig.cache
