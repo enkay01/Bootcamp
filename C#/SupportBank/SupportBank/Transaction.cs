@@ -8,38 +8,27 @@ namespace SupportBank
 {
     class Transaction
     {
-        private Account destination;
-        private DateTime date;
-        private string reference;
-        private decimal value;
-        public Transaction(DateTime date, Account dest, string reference, decimal value)
+        public Account FromAccount { get; }
+        public Account ToAccount { get; }
+        public DateTime Date { get; }
+        public string Narrative { get; }
+        public decimal Amount { get; }
+        public Transaction(DateTime date, Account source, Account dest, string reference, decimal value)
         {
-            this.date = date;
-            this.destination = dest;
-            this.value = value;
-            this.reference = reference;
+            this.Date = date;
+            this.FromAccount = source;
+            this.ToAccount = dest;
+            this.Amount = value;
+            this.Narrative = reference;
         }
-        public Account GetDestination()
-        {
-            return this.destination;
-        }
-        public DateTime GetDate()
-        {
-            return this.date;
-        }
-        public string GetReference()
-        {
-            return this.reference;
-        }
-        public decimal GetValue()
-        {
-            return this.value;
-        }
+        
+        
 
         public override string ToString()
         {
-            return string.Format("Date: {0}, Destination: {1}, Reference: {2}, Value: £{3}", this.GetDate(), this.GetDestination().GetName(),
-                this.GetReference(), this.GetValue());
+            return string.Format("Date: {0}, Destination: {1}, Reference: {2}, Value: £{3}", this.Date, this.ToAccount.GetName(),
+                this.Narrative, this.Amount);
         }
+
     }
 }

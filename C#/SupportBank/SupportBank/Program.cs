@@ -38,9 +38,9 @@ namespace SupportBank
 
                 if (choice.Equals(ListOne))
                 {
-                    Account acc;
+                    
                     string name = PromptName();
-                    if(accounts.TryGetValue(name, out acc))
+                    if(accounts.TryGetValue(name, out Account acc))
                     {
                         acc.PrintAllTransactions();
                     }

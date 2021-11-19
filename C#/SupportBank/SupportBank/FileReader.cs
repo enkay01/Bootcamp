@@ -36,29 +36,25 @@ namespace SupportBank
             int count = 1;
             foreach (string s in data)
             {
-                Logger.Info("Attempting to split csv");
+                Logger.Info("Attempting to split line {0}", count);
                 string[] field = s.Trim().Split(",");
-
-               
-                
-
-                
+                Logger.Info("Adding fields to objects");
                 if (IsValidDate(field[0], count))
                 {
                     if (IsValidDecimal(field[4], count))
                     {
                         if (!accounts.TryAdd(field[1], new Account(field[1])))
-                            Logger.Info("Account {0} already added, continuing", field[1]);
+                            Logger.Debug("Account {0} already added, continuing", field[1]);
                         if (!accounts.TryAdd(field[2], new Account(field[2])))
-                            Logger.Info("Account {0} already added, continuing", field[2]);
+                            Logger.Debug("Account {0} already added, continuing", field[2]);
 
-                        Logger.Info("Parsing transaction between {0} and {1}", field[1], field[2]);
+                        Logger.Debug("Parsing transaction between {0} and {1}", field[1], field[2]);
                         DateTime date = DateTime.Parse(field[0]);
                         decimal value = Decimal.Parse(field[4]);
-                        Transaction t = new(date, accounts[field[2]], field[3], value);
+                        Transaction t = new(date, accounts[field[1]], accounts[field[2]], field[3], value);
                         accounts[field[1]].AddTransaction(t);
-                        accounts[field[1]].DebitAccount(t.GetValue());
-                        accounts[field[2]].CreditAccount(t.GetValue());
+                        accounts[field[1]].DebitAccount(t.Amount);
+                        accounts[field[2]].CreditAccount(t.Amount);
                     }
                     else
                     {
@@ -99,4 +95,5 @@ namespace SupportBank
             return true;
         }
     }
+    
 }
