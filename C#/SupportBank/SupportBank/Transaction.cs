@@ -9,10 +9,10 @@ namespace SupportBank
     class Transaction
     {
         private Account destination;
-        private string date;
+        private DateTime date;
         private string reference;
         private decimal value;
-        public Transaction(string date, Account dest, string reference, decimal value)
+        public Transaction(DateTime date, Account dest, string reference, decimal value)
         {
             this.date = date;
             this.destination = dest;
@@ -23,7 +23,7 @@ namespace SupportBank
         {
             return this.destination;
         }
-        public string GetDate()
+        public DateTime GetDate()
         {
             return this.date;
         }
@@ -35,9 +35,10 @@ namespace SupportBank
         {
             return this.value;
         }
-        public string toString()
+
+        public override string ToString()
         {
-            return string.Format("Date: {0}, Destination: {1}, Reference: {2}, Value: £{3}", this.GetDate(), this.GetDestination(),
+            return string.Format("Date: {0}, Destination: {1}, Reference: {2}, Value: £{3}", this.GetDate(), this.GetDestination().GetName(),
                 this.GetReference(), this.GetValue());
         }
     }

@@ -2,15 +2,27 @@
 using System.IO;
 using System.Collections.Generic;
 using System.Linq;
+using NLog.Config;
+using NLog.Targets;
+using NLog;
 
 namespace SupportBank
 {
     class Program
     {
-        
+        private static readonly ILogger Logger = LogManager.GetCurrentClassLogger();
+
         static void Main(string[] args)
         {
+
+            var config = new LoggingConfiguration();
+            var target = new FileTarget { FileName = @"C:\Work\Logs\SupportBank.log", Layout = @"${longdate} ${level} - ${logger}: ${message}" };
+            config.AddTarget("File Logger", target);
+            config.LoggingRules.Add(new LoggingRule("*", LogLevel.Debug, target));
+            LogManager.Configuration = config;
+
             string[] data = File.ReadAllLines("C:\\Users\\Ian.Nkwocha\\OneDrive\\Documents\\Development\\Training\\Bootcamp\\C#\\SupportBank\\SupportBank\\Transactions2014.csv");
+
             data = data.Skip(1).ToArray();
             Dictionary<string, Account> accounts = new();
             
@@ -20,13 +32,33 @@ namespace SupportBank
                 
                 accounts.TryAdd(field[2], new Account(field[2]));
 
+                DateTime date;
+                Decimal value;
+                if (Decimal.TryParse(field[4], out value))
+                {
+                    if (DateTime.TryParse(field[0], out date))
+                    {
+                        Transaction t = new Transaction(date,
+                                                        accounts[field[2]],
+                                                        field[3],
+                                                        Decimal.Parse(field[4])
+                                                               );
+                        accounts[field[1]].AddTransaction(t);
+                        accounts[field[1]].DebitAccount(t.GetValue());
+                        accounts[field[2]].CreditAccount(t.GetValue());
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid monetary value entered {0}", field[4]);
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Date {0}", field[0]);
+                }
 
-                accounts[field[1]].AddTransaction(new Transaction(
-                                                           field[0],
-                                                           accounts[field[2]],
-                                                           field[3],
-                                                           Decimal.Parse(field[4])
-                                                           ));
+
+                
             }
 
 
@@ -58,7 +90,7 @@ namespace SupportBank
                 {
                     foreach(KeyValuePair<string, Account> kp in accounts)
                     {
-                        Console.WriteLine(kp.Value.toString());
+                        Console.WriteLine(kp.Value.ToString());
                     }
                     Console.WriteLine();
                 }

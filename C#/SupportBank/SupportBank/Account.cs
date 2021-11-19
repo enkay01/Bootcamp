@@ -10,6 +10,7 @@ namespace SupportBank
     {
         private string name;
         private List<Transaction> transactions;
+        private decimal balance = 0.0m;
         public Account(string name)
         {
             this.name = name;
@@ -29,14 +30,22 @@ namespace SupportBank
         }
         public void PrintAllTransactions()
         {
-            transactions.ForEach(e => Console.WriteLine(e.toString()));
+            transactions.ForEach(e => Console.WriteLine(e.ToString()));
             Console.WriteLine();
         }
         public decimal GetBalance()
         {
-            return transactions.Sum(x => x.GetValue());
+            return this.balance;
         }
-        public string toString()
+        public void DebitAccount(decimal d)
+        {
+            this.balance -= d;
+        }
+        public void CreditAccount(decimal d)
+        {
+            this.balance += d;
+        }
+        public override string ToString()
         {
             string status;
             decimal balance = GetBalance();
@@ -44,7 +53,7 @@ namespace SupportBank
                 status = " is owed ";
             else
                 status = " owes ";
-            return string.Format("{0}{1}£{2}.", this.GetName(), status, balance);
+            return string.Format("{0}{1}£{2}.", this.GetName(), status, Math.Abs(balance));
         }
     }
 }
