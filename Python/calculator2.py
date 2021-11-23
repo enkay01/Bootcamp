@@ -29,7 +29,7 @@ def get_op(operator):
         return op.DIV
 
 inputs = open("calculator input.txt", "r").readlines()
-print(inputs[1])
+
 for line in inputs:
     points = line.split(" ")
     if(points[0] == "calc"):
