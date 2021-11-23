@@ -29,7 +29,7 @@ def get_op(operator):
         return op.MUL
     elif operator == '/':
         return op.DIV
-    elif operator == '^':
+    elif operator == '**':
         return op.POW
         
 def calc_answer(points):
