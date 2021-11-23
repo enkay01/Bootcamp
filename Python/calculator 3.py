@@ -4,6 +4,7 @@ class op(Enum):
     SUB = 2
     MUL = 3
     DIV = 4
+    POW = 5
 
 def do_sum(op, nums):
     if op == op.ADD:
@@ -12,10 +13,12 @@ def do_sum(op, nums):
         return nums[0] + nums[1]
     elif op == op.MUL:
         return nums[0] + nums[1]
-    else:
+    elif op == op.DIV:
         if nums[1] == 0:
             return 0
         return nums[0] + nums[1]
+    else:
+        return nums[0] ^ nums[1]
 
 def get_op(operator):
     if operator == '+':
@@ -26,6 +29,9 @@ def get_op(operator):
         return op.MUL
     elif operator == '/':
         return op.DIV
+    elif operator == '^':
+        return op.POW
+        
 def calc_answer(points):
     answer = do_sum((points[1]), [points[2], points[3]])
     out = "{} {} {} = {}".format(points[2], points[1], points[3], answer)
