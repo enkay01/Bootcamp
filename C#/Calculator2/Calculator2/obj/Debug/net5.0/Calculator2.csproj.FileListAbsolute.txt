@@ -1,0 +1,16 @@
+C:\Users\Ian.Nkwocha\OneDrive\Documents\Development\Training\CSharp-Training\Calculator2\Calculator2\bin\Debug\net5.0\Calculator2.exe
+C:\Users\Ian.Nkwocha\OneDrive\Documents\Development\Training\CSharp-Training\Calculator2\Calculator2\bin\Debug\net5.0\Calculator2.deps.json
+C:\Users\Ian.Nkwocha\OneDrive\Documents\Development\Training\CSharp-Training\Calculator2\Calculator2\bin\Debug\net5.0\Calculator2.runtimeconfig.json
+C:\Users\Ian.Nkwocha\OneDrive\Documents\Development\Training\CSharp-Training\Calculator2\Calculator2\bin\Debug\net5.0\Calculator2.runtimeconfig.dev.json
+C:\Users\Ian.Nkwocha\OneDrive\Documents\Development\Training\CSharp-Training\Calculator2\Calculator2\bin\Debug\net5.0\Calculator2.dll
+C:\Users\Ian.Nkwocha\OneDrive\Documents\Development\Training\CSharp-Training\Calculator2\Calculator2\bin\Debug\net5.0\ref\Calculator2.dll
+C:\Users\Ian.Nkwocha\OneDrive\Documents\Development\Training\CSharp-Training\Calculator2\Calculator2\bin\Debug\net5.0\Calculator2.pdb
+C:\Users\Ian.Nkwocha\OneDrive\Documents\Development\Training\CSharp-Training\Calculator2\Calculator2\obj\Debug\net5.0\Calculator2.csproj.AssemblyReference.cache
+C:\Users\Ian.Nkwocha\OneDrive\Documents\Development\Training\CSharp-Training\Calculator2\Calculator2\obj\Debug\net5.0\Calculator2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ian.Nkwocha\OneDrive\Documents\Development\Training\CSharp-Training\Calculator2\Calculator2\obj\Debug\net5.0\Calculator2.AssemblyInfoInputs.cache
+C:\Users\Ian.Nkwocha\OneDrive\Documents\Development\Training\CSharp-Training\Calculator2\Calculator2\obj\Debug\net5.0\Calculator2.AssemblyInfo.cs
+C:\Users\Ian.Nkwocha\OneDrive\Documents\Development\Training\CSharp-Training\Calculator2\Calculator2\obj\Debug\net5.0\Calculator2.csproj.CoreCompileInputs.cache
+C:\Users\Ian.Nkwocha\OneDrive\Documents\Development\Training\CSharp-Training\Calculator2\Calculator2\obj\Debug\net5.0\Calculator2.dll
+C:\Users\Ian.Nkwocha\OneDrive\Documents\Development\Training\CSharp-Training\Calculator2\Calculator2\obj\Debug\net5.0\ref\Calculator2.dll
+C:\Users\Ian.Nkwocha\OneDrive\Documents\Development\Training\CSharp-Training\Calculator2\Calculator2\obj\Debug\net5.0\Calculator2.pdb
+C:\Users\Ian.Nkwocha\OneDrive\Documents\Development\Training\CSharp-Training\Calculator2\Calculator2\obj\Debug\net5.0\Calculator2.genruntimeconfig.cache
